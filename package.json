@@ -1,5 +1,9 @@
 {
   "scripts": {
-    "build": "cp src/*.js public/"
+    "build": "cp src/*.js public/ && cp src/index.html public/index.html",
+    "dev": "browser-sync start --server src --files src/**.*"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4"
   }
 }

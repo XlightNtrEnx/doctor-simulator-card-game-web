@@ -12,6 +12,7 @@ const Treatments = Object.freeze({
 
 export class Patient {
   name = getRandomName();
+  description = "Lorem ipsum";
   symptoms = [];
 
   onEndTurn() {

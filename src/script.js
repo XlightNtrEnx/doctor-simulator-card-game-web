@@ -62,7 +62,7 @@ const renderLastEvent = (eventHistory) => {
     eventHistory[eventHistory.length - 1].name
   }</div>
                       <div>
-                        <div class="text-xs">${
+                        <div class="text-[9px]">${
                           eventHistory[eventHistory.length - 1].description
                         }</div>
                       </div>`;
@@ -86,8 +86,8 @@ const renderPatients = (patients) => {
     };
     wrapper.innerHTML = `<div class="text-sm font-bold text-red-600">${p.name}</div>
                         <div>
-                          <div class="text-xs mb-[10px]">Symptoms: ${p.symptoms}</div>
-                          <div class="text-xs">${p.description}</div>
+                          <div class="text-[9px]">Symptoms: ${p.symptoms}</div>
+                          <div class="text-[9px]">${p.description}</div>
                         </div>`;
     activePatientsEle.appendChild(wrapper);
   });
@@ -115,7 +115,7 @@ const renderHand = (playerActions) => {
       playerActionUI.className = cardSizeCss;
       return;
     }
-    playerActionUI.className = `flex flex-col justify-between absolute bottom-0 left-[${
+    playerActionUI.className = `cursor-pointer flex flex-col justify-between absolute bottom-0 left-[${
       idx * 128
     }px] ${cardCss}`;
     playerActionUI.innerHTML = `<div class="text-sm font-bold text-red-600">${pAction.name}</div>
