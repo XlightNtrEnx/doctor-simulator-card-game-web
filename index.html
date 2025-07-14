@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="script.js"></script>
+    <title>Game</title>
+  </head>
+  <body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div
+      id="game"
+      class="grid h-[600px] w-[1000px] grid-cols-[3fr_1fr] grid-rows-[1fr_2fr_2fr]"
+    >
+      <!-- field -->
+      <div
+        id="field"
+        class="flex justify-center items-center col-start-1 row-start-1 row-span-2 bg-blue-200 p-4"
+      >
+        <div id="active-patients" class="flex gap-[10px]"></div>
+      </div>
+
+      <!-- footer -->
+      <div
+        id="footer"
+        class="flex justify-between items-center col-start-1 row-start-3 bg-green-200 p-[5px]"
+      >
+        <div class="flex relative self-end" id="hand"></div>
+        <button
+          id="end-turn-button"
+          class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          End Turn
+        </button>
+      </div>
+
+      <!-- sidebar -->
+      <div
+        id="sidebar"
+        class="col-start-2 row-start-1 row-span-3 bg-red-300 p-4"
+      >
+        <div>Actions: <span id="action-count"></span></div>
+        <div>Dice: <span id="dice-value"></span></div>
+        <div>Energy: <span id="player-energy-value"></span></div>
+        <div>Events: <span id="event-count"></span></div>
+        <div>Patients: <span id="patient-count"></span></div>
+        <div id="last-event"></div>
+      </div>
+    </div>
+  </body>
+</html>
